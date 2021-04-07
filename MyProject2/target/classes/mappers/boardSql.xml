@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+	<insert id="writeboard" parameterType="kr.co.korea.beans.BoardBean">
+		 insert into rest_board(bid,btitle,bcontent,bwriter)
+		 values(rboa_seq.nextval,#{btitle},#{bcontent},#{bwriter})
+	</insert>
+	
+	<select id="readboard" parameterType="Integer" resultType="kr.co.korea.beans.BoardBean">
+		select bid,btitle,bcontent,bwriter 
+		from rest_board	
+		where bid=#{bid}	
+	</select>
+	
+	<select id="getboardlist" resultType="kr.co.korea.beans.BoardBean">
+		select bid,btitle,bcontent,bwriter 
+		from rest_board
+	</select>
+	
+	<update id="updateboard" parameterType="kr.co.korea.beans.BoardBean">
+		update rest_board 
+		set bcontent=#{bcontent},btitle=#{btitle} 
+		where bid=#{bid}
+	</update>
+	
+	<delete id="deletebaord" parameterType="Integer">
+		delete from rest_board
+		where bid=#{bid}
+	</delete>
+</mapper>
