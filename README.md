@@ -2,13 +2,15 @@
 -------------------------------
 # 기술 스택
 
-Backend: Spring | Java 8 | Oracle | Mybatis | Tomcat 9.0 |
+Backend: Spring | Java 8 | Oracle | Mybatis | Tomcat 9.0 
+
 Tool : Eclipse | Postman
 
 -------------------------------
 # 계기
 
 Restful Api 와 같은 단어를 자주 접하면서 '대체 Rest가 뭐지??'하는 호기심으로 시작.
+
 막상 구글링과 구현을 하면서 느낀거는 Rest는 아키텍쳐. 구현은 개발자 마음대로
 
 -------------------------------
